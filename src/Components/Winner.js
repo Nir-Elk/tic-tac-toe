@@ -1,6 +1,5 @@
 import React from "react"
-import X from "./X"
-import O from "./O"
+import Sign from "./Sign"
 
 class Winner extends React.Component {
 
@@ -9,9 +8,7 @@ class Winner extends React.Component {
         return (
             <div style={{fontSize: '5rem'}}>
                 {text}
-                {this.props.winner === 1 && <X/>}
-                {this.props.winner === 2 && <O/>}
-
+                {this.props.winner >0 && <Sign sign={this.props.winner}/>}
                 <div><button onClick={()=>this.props.init()}>Start Over</button></div>
             </div>
         );

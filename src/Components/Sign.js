@@ -1,14 +1,15 @@
 import React from "react"
 
-class O extends React.Component {
+class Sign extends React.Component {
 
     render(props) {
+        const sign = this.props.sign === 1?"X":"O";
         return (
             <div style={{fontSize: '5rem'}}>
-                O
+                {sign}
             </div>
         );
     }
 }
 
-export default O;
+export default Sign;

@@ -1,5 +1,5 @@
 import React from "react";
-import E from "./E"
+import Cell from "./Cell"
 import Winner from "./Winner";
 import "../style.css"
 import Row from "react-bootstrap/Row";
@@ -87,7 +87,7 @@ class Board extends React.Component {
                         {
                             row.map((cell, y) =>
                                 <Col sm={1}>
-                                    <E cell={cell} x={x} y={y} put={this.put}/>
+                                    <Cell cell={cell} x={x} y={y} put={this.put}/>
                                 </Col>
                             )
                         }
